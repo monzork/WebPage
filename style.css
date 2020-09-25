@@ -1,5 +1,170 @@
-.column {
-     width: 300px;
-     float: left;
-     margin-left: 50px
+@font-face {
+     font-family: itc;
+     src: url(./assets/itc/ITCKabelStdMedium.TTF);
+}
+
+* {
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     background: #1f1f1f;
+}
+
+h1, h2, h3, h4 {
+     margin: 0 0 3px 0;
+}
+
+h1 {
+     color: white;
+     font: bold 52px Helvetica, Arial, Sans-Serif;
+     /* text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; */
+     -webkit-transition: all 0.12s ease-out;
+     -moz-transition: all 0.12s ease-out;
+     -o-transition: all 0.12s ease-out;
+}
+
+h2 {
+     color: white;
+     font: bold 34px Helvetica, Arial, Sans-Serif;
+     /* text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; */
+     -webkit-transition: all 0.12s ease-out;
+     -moz-transition: all 0.12s ease-out;
+     -o-transition: all 0.12s ease-out;
+}
+
+h4 {
+     color: white;
+     font: bold 24px Helvetica, Arial, Sans-Serif;
+     text-shadow: 1px 1px #02a2fe, 2px 2px #02a2fe, 3px 3px #02a2fe;
+     -webkit-transition: all 0.12s ease-out;
+     -moz-transition: all 0.12s ease-out;
+     -o-transition: all 0.12s ease-out;
+}
+
+#page-wrap {
+     /* width: 700px; */
+     margin: 0 auto;
+     padding: 20px;
+     text-align: center;
+}
+
+li {
+     list-style-type: none;
+}
+
+.color-white {
+     text-align: left;
+     margin: 0;
+     padding: 10px;
+     font-family: itc;
+     color: white;
+}
+
+.lower-text {
+     font-size: 0.8em;
+}
+
+.bigger-text {
+     font-size: 2.5em
+}
+
+.normal-text {
+     font-size: 1.5em;
+}
+
+.letters {
+     text-shadow: 0 1px 0 #ed41a4, 0 2px 0 #ed41a4, 0 3px 0 #ed41a4, 0 4px 0 #ed41a4, 0 5px 0 #ed41a4, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+     font-size: 2.5em;
+}
+
+a {
+     text-decoration: none;
+     /*below I changed the color*/
+     color: white;
+     /*I added some padding*/
+     padding: 2vw;
+     /*also changed the font family but that's totally irrelevant*/
+     font-family: itc;
+}
+
+ul {
+     margin: 0;
+     margin-bottom: 1vh;
+     padding: 0;
+     display: flex;
+}
+
+nav {
+     width: 100vw;
+     background-color: #0dd29c;
+}
+
+body {
+     margin: 0;
+}
+
+h3 {
+     font-family: itc;
+     font-size: 3em;
+     color: white;
+}
+
+li {
+     list-style-type: none;
+     /*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
+     margin: 0 2vw;
+     font-size: 3vh;
+}
+
+@media only screen and (max-width: 500px) {
+     /*shows elements in a column*/
+     ul {
+          flex-direction: column;
+     }
+     /* deletes margin on top or bottom of the a tag*/
+     li {
+          margin: 0;
+     }
+     /* makes sure that the a tag will take the entire screen*/
+     a {
+          display: block;
+     }
+}
+
+button {
+     display: none;
+}
+
+@media only screen and (max-width: 500px) {
+     button {
+          /*makes the button visible*/
+          display: block;
+          /*since we are here, we can style it a little bit!*/
+          padding: 2vw;
+          font-size: 3vh;
+          background-color: #AFE0FF;
+          border: none;
+          /*outline none removes the default blue border that appears anytime you click on the button*/
+          outline: none;
+          cursor: pointer;
+     }
+}
+
+.purple {
+     background-color: #7c72fc;
+     margin: 0 auto;
+     padding: 20px;
+     text-align: center;
+}
+
+.grid-container {
+     display: grid;
+     border-style: solid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     grid-gap: 10px;
+     width: 100vw;
+     height: 100vh;
 }
